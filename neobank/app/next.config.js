@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -21,8 +22,6 @@ const nextConfig = {
     return config;
   },
   // Necessário para pacotes Solana que usam módulos Node no browser
-  serverExternalPackages: ["@coral-xyz/anchor", "@solana/web3.js"],
-  outputFileTracingRoot: require("path").join(__dirname, "../../"),
 };
 
 module.exports = nextConfig;
