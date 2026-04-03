@@ -40,7 +40,7 @@ function AppContent() {
         </div>
         <WalletMultiButton />
         <p className="text-xs text-muted-foreground">
-          Bootcamp Hackathon Global 2026 · Superteam Brazil × NearX
+          Superteam Brazil × NearX
         </p>
       </div>
     );
