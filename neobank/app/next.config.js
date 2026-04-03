@@ -21,9 +21,8 @@ const nextConfig = {
     return config;
   },
   // Necessário para pacotes Solana que usam módulos Node no browser
-  experimental: {
-    serverComponentsExternalPackages: ["@coral-xyz/anchor", "@solana/web3.js"],
-  },
+  serverExternalPackages: ["@coral-xyz/anchor", "@solana/web3.js"],
+  outputFileTracingRoot: require("path").join(__dirname, "../../"),
 };
 
 module.exports = nextConfig;
